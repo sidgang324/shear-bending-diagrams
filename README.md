@@ -1,5 +1,5 @@
 # Shear Force and Bending Moment Diagram Generator
-Automatically generate shear force and bending moment diagrams.
+Automatically generate shear force and bending moment diagrams to verify solutions to problems that might be found in an introductory statics course. This tool can be used pedagogically to create custom problems and solutions as well.
 
 ## Usage
 Use positive scalar values without units for beam length and support locations. Initialize the beam object as shown in `test.ipynb`.
