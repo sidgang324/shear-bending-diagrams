@@ -195,3 +195,18 @@ class Beam:
         y_val = np.array([lam_func(t) for t in x_val])
         ax[2].plot(x_val, y_val, color='darkorange', linewidth=1)
         ax[2].fill_between(x_val, y_val, fc='orange', alpha=0.5, zorder=0)
+
+# Initialize a Beam object with length 12
+beam = Beam(12)
+# Specify the locations of the two supports (arbitrarily pinned or roller)
+beam.first_support = 0
+beam.second_support = 12
+# Add list of external loads
+external_loads = (PointLoad(-20, 6), # point load: 20 units of force downward, 6 units of length from left end
+                  DistributedLoad(-10, (4,10)) # distributed load of magnitude 10 per unit length, direction downward, from position 4 to 10
+                  )
+beam.add_loads(external_loads)
+# Output graphs and print important points
+print('Reaction Force 1: ', beam._reaction_forces[0])
+print('Reaction Force 2: ', beam._reaction_forces[1])
+beam.draw_diagram()
