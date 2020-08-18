@@ -1,4 +1,4 @@
-# shear-bending-diagrams
+# Shear Force and Bending Moment Diagram Generator
 Automatically generate shear force and bending moment diagrams.
 
 ## Usage
